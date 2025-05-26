@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.colored-bg-wrapper {
+  background-color: #007aff;
+  min-height: 100vh;
+}
