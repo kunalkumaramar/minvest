@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/minvest/static/css/main.e0f54c49.css",
-    "main.js": "/minvest/static/js/main.affba135.js",
+    "main.css": "/minvest/static/css/main.b33763a0.css",
+    "main.js": "/minvest/static/js/main.cbedffa3.js",
     "static/js/453.dd08451e.chunk.js": "/minvest/static/js/453.dd08451e.chunk.js",
     "static/media/newProfile.png": "/minvest/static/media/newProfile.8e1a9b638fba3a81f2ae.png",
     "static/media/profile.jpg": "/minvest/static/media/profile.7b116d613305504b0227.jpg",
     "static/media/logo.jpg": "/minvest/static/media/logo.9952ab232ba71bdb408c.jpg",
     "index.html": "/minvest/index.html",
-    "main.e0f54c49.css.map": "/minvest/static/css/main.e0f54c49.css.map",
-    "main.affba135.js.map": "/minvest/static/js/main.affba135.js.map",
+    "main.b33763a0.css.map": "/minvest/static/css/main.b33763a0.css.map",
+    "main.cbedffa3.js.map": "/minvest/static/js/main.cbedffa3.js.map",
     "453.dd08451e.chunk.js.map": "/minvest/static/js/453.dd08451e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0f54c49.css",
-    "static/js/main.affba135.js"
+    "static/css/main.b33763a0.css",
+    "static/js/main.cbedffa3.js"
   ]
 }
