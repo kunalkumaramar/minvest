@@ -8,12 +8,18 @@
 
 /* Highlighted Text */
 .highlight {
-  font-weight: 500;
+  color: #0047ff;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
 }
 .highlight1 {
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
+}
+.highlight3 {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: black;
 }
 
 /* Services Section */
@@ -24,28 +30,35 @@
 }
 
 .services-header {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
   font-family: 'Poppins', sans-serif;
 }
 
 .services-header h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
-
+.see-more-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
 .see-more-btn {
   background-color: #007bff;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
 }
 
 .see-more-btn:hover {
@@ -83,12 +96,19 @@
 @media (max-width: 768px) {
   .services-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: 10px;
     text-align: center;
   }
 
   .see-more-btn {
     width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .see-more-btn,
+  .contact-now {
+    width: 100%;
+    font-size: 1rem;
   }
 }
 
@@ -137,7 +157,7 @@
 }
 
 .about-text h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   margin: 1rem 0;
   font-family: 'Poppins', sans-serif;
 }
@@ -154,6 +174,8 @@
   gap: 2rem;
   margin: 2rem 0;
   font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .stat h3 {
@@ -208,17 +230,20 @@
   }
 }
 .partners-section {
-  padding: 60px 10%;
+  padding: 40px 0;
   background-color: #f4f7ff;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  margin: 60px 0;
+  overflow: hidden;
 }
 
 .partners-title {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 500;
   margin-bottom: 30px;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .scrolling-partners {
@@ -229,25 +254,33 @@
 
 .partners-track {
   display: flex;
-  gap: 40px;
-  animation: scrollPartners 30s linear infinite;
+  animation: scrollPartners 40s linear infinite;
   align-items: center;
+  width: max-content;
 }
 
 .partner-logo {
   flex: 0 0 auto;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 0 25px;
+  overflow:hidden;
+  border-radius: 100%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .partner-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
   border-radius: 50%;          
@@ -266,4 +299,64 @@
   100% {
     transform: translateX(-50%);
   }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  .services-section,
+  .about-section,
+  .partners-section {
+    padding: 2rem 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .partners-track {
+    gap: 0px;
+  }
+
+  .partner-logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+.success-message {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 500;
+  border-left: 6px solid #2e7d32;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.1);
+  transition: all 0.3s ease;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.success-message {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

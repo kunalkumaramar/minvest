@@ -68,7 +68,7 @@ const Banner = () => {
         <div className="banner-container">
           <div className="banner-left">
             <h3>Hello!</h3>
-            <h1>We are <span className="highlight">MEDAL INVESTMENTS</span></h1>
+            <h1><span className='highlight3'>We are</span> <span className="highlight">MEDAL INVESTMENTS</span></h1>
             <p className="tagline">EMI for the Future</p>
             <p>We provide personalized investment consultation according to your life needs.</p>
             <div className="banner-buttons">

@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
-  { initial: 'A', name: 'Ankur Sharma', title: 'Startup Founder', comment: 'Outstanding financial advice and execution. Highly recommended!' },
-  { initial: 'B', name: 'Bina Mehta', title: 'Businesswoman', comment: 'Helped me streamline my investments and secure my future.' },
-  { initial: 'C', name: 'Chirag Patel', title: 'IT Consultant', comment: 'Clear guidance on SIP/SWP, very trustworthy service.' },
-  { initial: 'D', name: 'Divya Joshi', title: 'Professor', comment: 'They made finance easy to understand. Great experience!' },
-  { initial: 'E', name: 'Eshan Verma', title: 'Real Estate Agent', comment: 'Alternate investments explained beautifully. Gained a lot.' },
-  { initial: 'F', name: 'Fatima Khan', title: 'Doctor', comment: 'Peace of mind through excellent financial planning advice.' },
+  { initial: 'S', name: 'Sanjali Dharamshi', comment: "'I'm really thankful to Prafful for encouraging me to start investing in mutual funds. His practical advice and steady guidance have made a big difference in how I handle my finances."},
+  { initial: 'B', name: 'Bhoumik Nandu', comment: 'Praful has been an excellent investment advisor, consistently making smart and timely decisions that have strengthened my portfolio.' },
+  { initial: 'C', name: 'Chirag Patel', comment: 'Clear guidance on SIP/SWP, very trustworthy service.' },
+  { initial: 'D', name: 'Divya Joshi', comment: 'They made finance easy to understand. Great experience!' },
+  { initial: 'E', name: 'Eshan Verma', comment: 'Alternate investments explained beautifully. Gained a lot.' },
+  { initial: 'F', name: 'Fatima Khan', comment: 'Peace of mind through excellent financial planning advice.' },
 ];
 
 const Services = () => {
@@ -106,7 +106,7 @@ const Services = () => {
 
       {/* Section Title */}
       <div className="services-title">
-        <h2><span>Services</span> We Provide</h2>
+        <h2><span className='highlight'>Services</span> We Provide</h2>
       </div>
 
       {/* Service Cards */}
@@ -131,7 +131,7 @@ const Services = () => {
       {/* Testimonials */}
       <div className="testimonial-section">
         <p className="subtitle">— Client Testimonials</p>
-        <h2>The Impact of Our Work: <span>Client Testimonials</span></h2>
+        <h2>The Impact of Our Work: <span className='highlight'>Client Testimonials</span></h2>
 
         <div className="testimonial-slider">
           <button onClick={handlePrev}><FaArrowLeft /></button>

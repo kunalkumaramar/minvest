@@ -7,7 +7,7 @@
 
 .about-header1 {
   text-align: center;
-  padding: 210px 20px 60px;
+  padding: 160px 20px 60px;
   background: #007aff;
   color: white;
   margin-top: -80px;
@@ -142,7 +142,7 @@
 
 .about-text1 h2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -241,5 +241,79 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .about-container1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-text1 {
+    text-align: center;
+  }
+
+  .about-stats1 {
+    justify-content: center;
+  }
+
+  .stat1 {
+    flex: 1 1 100px;
+  }
+
+  .about-text1 h2 {
+    font-size: 24px;
+  }
+
+  .about-subtitle1 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .about-header1 h1 {
+    font-size: 28px;
+  }
+
+  .about-intro h2,
+  .about-text1 h2 {
+    font-size: 22px;
+  }
+
+  .about-text1 p,
+  .about-intro p,
+  .founder-message p {
+    font-size: 14px;
+  }
+
+  .mission-vision h3 {
+    font-size: 18px;
+  }
+
+  .stat1 h3 {
+    font-size: 20px;
+  }
+
+  .stat1 p {
+    font-size: 12px;
+  }
+
+  .contact-now1 {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .about-header1 {
+    padding: 160px 20px 60px;
+  }
+
+  .about-page {
+    padding-bottom: 60px;
+  }
+
+  .founder-message {
+    padding: 30px 15px;
   }
 }

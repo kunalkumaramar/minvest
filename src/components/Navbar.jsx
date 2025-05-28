@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
   const location = useLocation();
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
@@ -13,22 +17,27 @@ const Navbar = () => {
           <img src={logo} alt="Logo" />
         </div>
 
-        <ul className="navbar-links">
-          <li className={location.pathname === '/' ? 'active' : ''}>
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
+        <ul className={`navbar-links ${isMenuOpen ? 'show-menu' : ''}`}>
+          <li className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>
             <Link to="/">Home</Link>
           </li>
-          <li className={location.pathname === '/about' ? 'active' : ''}>
+          <li className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>
             <Link to="/about">About us</Link>
           </li>
-          <li className={location.pathname === '/services' ? 'active' : ''}>
+          <li className={location.pathname === '/services' ? 'active' : ''} onClick={closeMenu}>
             <Link to="/services">Services</Link>
           </li>
-          <li className={location.pathname === '/contact' ? 'active' : ''}>
+          <li className={location.pathname === '/contact' ? 'active' : ''} onClick={closeMenu}>
             <Link to="/contact">Contact us</Link>
           </li>
         </ul>
 
-        {/* Changed from Link to a tag for WhatsApp */}
         <div className="navbar-contact">
           <a
             href="https://wa.me/918277608357"

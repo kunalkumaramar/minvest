@@ -113,7 +113,7 @@ const About = () => {
           </div>
           <div className="about-text1">
             <p className="about-subtitle1">~ About Me</p>
-            <h2>Who is <span className="highlight2">Mr. Prafful Jain?</span></h2>
+            <h2>Who is <span className="highlight">Mr. Prafful Jain?</span></h2>
             <p>
               He is the founder of Medal Investments and has achieved excellent results for both his clients and himself
               through his exceptional knowledge in financial planning.
